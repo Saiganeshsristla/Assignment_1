@@ -1,0 +1,3 @@
+What is Emmet?
+-> Emmet is something that helps the developer to write the code fast and provides some shortcuts which in turns saves the time of the developer.
+In visual studio code the emmet is inbuilt and you can you it whenever you want, there are cheatsheets also available on the internet of Emmet that we can refer to learn.

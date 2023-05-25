@@ -1,0 +1,3 @@
+what is crossorigin in script tag?
+-> when we provide crossorigin in the script tag than it gives us access to use the script code that has been comming to our code. crossorigin is use in Cross Origin Resourse Sharing(CORS)
+The main purpose is to share Resourse from one domain to other domain.

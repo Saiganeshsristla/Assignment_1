@@ -1,0 +1,4 @@
+Library is something that contains the code that some other developer wrote and we can reuse that code in our applications.
+Framework is bigger than a Library and it is also contains the code that other developer wrote
+If we want develop a application we didn't need to start from the scratch by using frameworks we saves time and risk of errors
+The main difference between Library and Framework is Inversion of control

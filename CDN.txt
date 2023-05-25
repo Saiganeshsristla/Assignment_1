@@ -1,0 +1,2 @@
+What is CDN?
+-> CDN which is also known as content delivery network provides us the content or source code from an externel server to our desktop.
