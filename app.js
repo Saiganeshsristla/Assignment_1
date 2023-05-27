@@ -13,17 +13,26 @@
  */
 
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-  "h1",
-  {
-    id: "title",
-    className: "heading",
-  },
-  "Saiganesh Learning React with Namaste React"
+const heading = (
+  <div>
+    <h1>Hi Everyone I am Saiganesh</h1>
+    <h2>and I am learning react with namaste react.</h2>
+  </div>
 );
+
+//component
+
+const About = function () {
+  return (
+    <div>
+      {heading}
+      <p>I am a web developer trying to learn some cool stuff.</p>
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
-root.render(heading);
+root.render(<About />);
