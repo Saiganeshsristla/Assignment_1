@@ -4,7 +4,9 @@ import ReactDOM from "react-dom/client";
 const Header = () => {
   return (
     <div className="header">
-      <h1 id="logo">Food Villa</h1>
+      <a href="/">
+        <h1 id="logo">Food Villa</h1>
+      </a>
       <ul id="nav-list">
         <a href="/">
           {" "}
@@ -408,18 +410,23 @@ const restaurantList = [
   },
 ];
 
-const RestaurantCard = (props) => {
-  console.log(props.restaurant.name);
+const RestaurantCard = ({
+  name,
+  area,
+  costForTwoString,
+  avgRating,
+  cloudinaryImageId,
+}) => {
   let imageUrl =
     "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-    props.restaurant.cloudinaryImageId;
+    cloudinaryImageId;
   return (
     <div className="card">
       <img src={imageUrl} alt="food image" />
-      <h2>{props.restaurant?.name}</h2>
-      <p>{props.restaurant?.area}</p>
-      <p>{props.restaurant?.costForTwoString}</p>
-      <h4>{props.restaurant?.avgRating} stars</h4>
+      <h2>{name}</h2>
+      <p>{area}</p>
+      <p>{costForTwoString}</p>
+      <h4>{avgRating} stars</h4>
     </div>
   );
 };
@@ -427,10 +434,17 @@ const RestaurantCard = (props) => {
 const Body = () => {
   return (
     <div className="container">
-      <RestaurantCard restaurant={restaurantList[0].data} />
-      <RestaurantCard restaurant={restaurantList[1].data} />
-      <RestaurantCard restaurant={restaurantList[2].data} />
-      <RestaurantCard restaurant={restaurantList[3].data} />
+      {restaurantList.map(function (restaurant) {
+        return (
+          <>
+            <RestaurantCard {...restaurant.data} />
+            <RestaurantCard {...restaurant.data} />
+            <RestaurantCard {...restaurant.data} />
+            <RestaurantCard {...restaurant.data} />
+            <RestaurantCard {...restaurant.data} />
+          </>
+        );
+      })}
     </div>
   );
 };
@@ -440,15 +454,21 @@ const Footer = () => {
     <div className="footer">
       <p id="copyright">@Saiganesh made with ❤️</p>
       <ul>
-        <a href="">
+        <a
+          href="https://instagram.com/saiganesh31_?igshid=MTIzZWQxMDU="
+          target="_blank"
+        >
           {" "}
           <li className="socials">Instagarm</li>{" "}
         </a>
-        <a href="">
+        <a
+          href="https://twitter.com/SSristla?t=-C92-X2zurTTjI7Im7lm1Q&s=09"
+          target="_blank"
+        >
           {" "}
           <li className="socials">Twitter</li>{" "}
         </a>
-        <a href="">
+        <a href="mailto:saiganesh3108@gmail.com" target="_blank">
           {" "}
           <li className="socials">Gmail</li>{" "}
         </a>
