@@ -1,0 +1,3 @@
+is JSX or ES6 mandatory in react?
+-> Absolutely no, to code in react it is not mandatory to use JSX or even ES6
+but we should use JSX and ES6 because it provides some additional benefits.

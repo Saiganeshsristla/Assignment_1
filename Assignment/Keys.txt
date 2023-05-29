@@ -1,0 +1,5 @@
+1. why do we need keys in React? 
+-> suppose in the virtual DOM there are 4 div element one below the other and later we added one more new div element so React will not able to diff both the trees it will not able to understand which div has added newly so it will render the everything again.
+But if we had given keys to all the 4 divs before addding the new div then React will able to understand that which is the new div element that has added and it will render only the new div element in the DOM.
+
+Note:- Keys of every element should be unique.

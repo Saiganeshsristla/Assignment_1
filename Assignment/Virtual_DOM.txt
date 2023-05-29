@@ -1,0 +1,8 @@
+1. what is virtual DOM?
+-> virtual DOM is a representation of the actual DOM. It is exactly the copy of the actual DOM. It is used in an algorithm known as diffing algorithm.
+
+2. what is diffing algorithm?
+-> React uses this algorithm to diff one tree(new virtual DOM) with other(old virtual DOM). It finds out what is exactly changed in the DOM so it can do reconciliation.
+
+3. what is reconciliation?
+-> reconciliation is the process in which react renders the changed part in the DOM.

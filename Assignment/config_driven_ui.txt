@@ -1,0 +1,2 @@
+What is config driven ui?
+-> when you build a real world application you should want your website to work in many different countries and cities and you want to control your frontend according to the configuration that will be provided by the backend This UI is known as config driven ui.

@@ -1,0 +1,3 @@
+What is props in React? 
+-> props also known as properties is used to passed arguments to the components ,
+React props are like function argument in js and attributes in HTML. 
