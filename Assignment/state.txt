@@ -1,0 +1,3 @@
+what is react state?
+-> It is a react object that used to stores the data and information about the component
+whenever the state of component changes, it re-render the component

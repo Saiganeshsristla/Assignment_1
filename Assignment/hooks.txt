@@ -1,0 +1,2 @@
+what is react hooks?
+-> hooks is a simple function that is used in function component to add some functionality to the state variable.

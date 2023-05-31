@@ -1,0 +1,3 @@
+why do we need state variable?
+->If we declare a local variable inside the function component then when the variable update then the UI will not re-render 
+To sync the UI with the local variable updation we will need to make a local state variable

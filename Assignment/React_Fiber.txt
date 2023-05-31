@@ -1,7 +1,7 @@
 What is React Fiber?
--> React fiber is a new React engine that makes React faster and smarter, it came for React 16 and above
+-> React fiber is a new React engine that makes React faster and smarter, it came as default from React 16 
 
-features of React Fiber:
-* it can pause, resume and restart rendering on components as new update come in.
-* Reuse previous work and even abort it if not needed.
-* split work into chunks.
+* features of React Fiber:
+- it can pause, resume and restart rendering on components as new update come in.
+- Reuse previous work and even abort it if not needed.
+- split work into chunks and priorities task
