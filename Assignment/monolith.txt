@@ -1,0 +1,2 @@
+what is monolith?
+-> monolith is the architecture of building software applications into a single projects and that project is very huge as all the features are integrated only in that single app.

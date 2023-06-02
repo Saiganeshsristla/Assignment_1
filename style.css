@@ -119,3 +119,55 @@ ul > a > li {
 .search-btn:focus {
   background-color: #f082ac;
 }
+
+.shimmer-container {
+  width: 100%;
+  height: 600px;
+  background-color: #526d82;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 300px;
+  background-color: #324e5f;
+  padding: 10px;
+  margin: 2%;
+}
+
+.shimmer-head {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.shimmer-head > div {
+  height: 40px;
+  width: 250px;
+  background-color: #324e5f;
+  margin: 15px 80px;
+}
+
+.no-restaurant {
+  height: 500px;
+  background-color: #526d82;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  height: 50px;
+  width: 80px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.logout-btn {
+  height: 50px;
+  width: 80px;
+  margin-top: 20px;
+  margin-right: 20px;
+}

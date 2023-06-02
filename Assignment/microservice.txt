@@ -1,0 +1,2 @@
+what is microservice?
+-> while we are building an industry level project then we can divide our app into other smaller projects which are micro task. This approach is known as microservices  

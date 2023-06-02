@@ -1,0 +1,4 @@
+what is cors?
+-> The cors which is also known as cross origin resources sharing is a protection provided by the browser. It is used to share resoureces between two origin .
+Browser directly not allow us to share resourse between different origin It will authenticate and then only allow.
+There is also the keyword crossorigin that is used in the script tag mostly importing any content CDN.  

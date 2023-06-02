@@ -1,0 +1,4 @@
+what is shimmer UI?
+-> shimmer UI is used for improving the user experience(UX). It is shown before the actual webpage renders. 
+The webpage will take some time to load because of the api calls and then it will unexpectedly renders to the browser and this is very bad user experience(UX)
+To solve this issue many big companies uses this shimmer UI. 
