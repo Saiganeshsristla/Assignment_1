@@ -68,11 +68,11 @@ const Body = () => {
         ) : (
           filterRestaurants.map(function (restaurant) {
             return (
-              <Link to={"/restaurant/" + restaurant?.data?.id}>
-                <RestaurantCard
-                  {...restaurant?.data}
-                  key={restaurant?.data?.id}
-                />
+              <Link
+                to={"/restaurant/" + restaurant?.data?.id}
+                key={restaurant?.data?.id}
+              >
+                <RestaurantCard {...restaurant?.data} />
               </Link>
             );
           })

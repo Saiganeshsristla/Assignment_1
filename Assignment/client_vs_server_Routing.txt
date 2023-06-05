@@ -1,0 +1,2 @@
+what is difference in client side routing and server side routing?
+-> Client side routing means the web pages are available and not coming from the server where as in server side routing the get request is send to the server and according to which the server sends the document to render.

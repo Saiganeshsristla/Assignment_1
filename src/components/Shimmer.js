@@ -5,16 +5,11 @@ const Shimmer = () => {
         <div></div>
       </div>
       <div className="shimmer-container">
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
+        {Array(10)
+          .fill("")
+          .map(function (data, index) {
+            return <div className="shimmer-card" key={index}></div>;
+          })}
       </div>
     </>
   );
