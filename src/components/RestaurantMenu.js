@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "./constants";
 import Shimmer from "./Shimmer";
-import useRestaurant from "../utils/useRestaurant";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = function () {
   const { id } = useParams();
 
   // created a custom hook useRestaurant
-  const ResMenu = useRestaurant(id);
+  const ResMenu = useRestaurantMenu(id);
 
   if (ResMenu.length === 0) {
     return <Shimmer />;
