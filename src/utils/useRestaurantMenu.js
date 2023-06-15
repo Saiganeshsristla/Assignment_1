@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useRestaurant = function (id) {
+const useRestaurantMenu = function (id) {
   const [ResMenu, setResMenu] = useState([]);
 
   useEffect(() => {
@@ -20,4 +20,4 @@ const useRestaurant = function (id) {
   return ResMenu;
 };
 
-export default useRestaurant;
+export default useRestaurantMenu;

@@ -1471,7 +1471,7 @@ export const RestaurantCard = ({
 }) => {
   let imageUrl = IMG_CDN_URL + cloudinaryImageId;
   return (
-    <div className="card">
+    <div className="w-52 m-2 p-2 shadow-lg h-72">
       <img src={imageUrl} alt="food image" />
       <h2>{name}</h2>
       <p>{area}</p>

@@ -6,28 +6,19 @@ import NoRestaurant from "./No_Restaurant";
 import { Link } from "react-router-dom";
 import { FilterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
+import useRestaurant from "../utils/useRestaurant";
 
 const Body = () => {
   const [searchText, setSearchText] = useState();
 
-  const [allRestaurants, setAllRestaurants] = useState([]);
-  const [filterRestaurants, setFilterRestaurants] = useState([]);
+  const [
+    allRestaurants,
+    setAllRestaurants,
+    filterRestaurants,
+    setFilterRestaurants,
+  ] = useRestaurant();
 
   const isOnline = useOnline();
-
-  useEffect(function () {
-    getRestaurants();
-  }, []);
-
-  async function getRestaurants() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2032638&lng=72.9479015&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json();
-
-    setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    setFilterRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-  }
 
   if (!isOnline) {
     return <h1>Offline! please check your internet connection</h1>;
@@ -39,10 +30,10 @@ const Body = () => {
 
   return (
     <>
-      <div className="search-bar">
+      <div className="my-4 p-4 h-16 ml-16">
         <input
           type="text"
-          className="search-input"
+          className="mx-3  h-8 p-2 border-2 border-gray-500 rounded-md hover:bg-gray-200 focus:h-10 focus:bg-white"
           placeholder="search"
           value={searchText}
           onChange={function (e) {
@@ -50,7 +41,7 @@ const Body = () => {
           }}
         />
         <button
-          className="search-btn"
+          className="bg-purple-900 text-white px-2 pb-1 mb-1 rounded-full hover:bg-purple-400 hover:text-black"
           onClick={function () {
             // Filterout the restaurants
             const filterData = FilterData(searchText, allRestaurants);
@@ -63,7 +54,7 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="container">
+      <div className="flex justify-center mx-2 flex-wrap">
         {filterRestaurants.length === 0 ? (
           <NoRestaurant />
         ) : (

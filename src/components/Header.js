@@ -9,31 +9,32 @@ const Header = () => {
   const isOnline = useOnline();
 
   return (
-    <div className="header">
+    <div className="flex justify-between bg-pink-200 shadow-lg">
       <Link to="#">
-        <h1 id="logo">Food Villa</h1>
+        <h1 className="font-semibold text-3xl my-5 mx-6">Food Villa</h1>
       </Link>
 
-      <ul id="nav-list">
+      <ul className="flex my-6">
         <Link to="/">
-          <li>Home</li>
+          <li className="px-3">Home</li>
         </Link>
         <Link to="/about">
-          <li>About</li>
+          <li className="px-3">About</li>
         </Link>
         <Link to="/contact">
-          <li>Contact</li>
+          <li className="px-3">Contact</li>
         </Link>
         <Link to="/cart">
-          <li>Cart</li>
+          <li className="px-3">Cart</li>
         </Link>
       </ul>
 
-      <h1>{isOnline ? "✅Online" : "❎Offline"}</h1>
+      <h1 className="my-6">{isOnline ? "✅Online" : "❎Offline"}</h1>
 
       {isLoggedIn ? (
         <button
-          className="login-btn"
+          className="bg-white mr-5 h-12 w-20 mt-4
+           rounded-md hover:bg-pink-300"
           onClick={function () {
             setIsLoggedIn(false);
           }}
@@ -42,7 +43,8 @@ const Header = () => {
         </button>
       ) : (
         <button
-          className="logout-btn"
+          className="bg-white mr-5 h-12 w-20 mt-4
+           rounded-md hover:bg-pink-300"
           onClick={function () {
             setIsLoggedIn(true);
           }}
