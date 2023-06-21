@@ -10,7 +10,7 @@ import useRestaurant from "../utils/useRestaurant";
 
 const Body = () => {
   const [searchText, setSearchText] = useState();
-
+  
   const [
     allRestaurants,
     setAllRestaurants,

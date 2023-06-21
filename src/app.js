@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState, useContext } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -10,6 +10,8 @@ import Contact from "./components/contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { Outlet } from "react-router-dom";
 import Loading from "./components/Loading";
+import InstaMart from "./components/InstaMart";
+import UserContext from "./utils/userContext";
 // import Cart from "./components/Cart";
 
 const Cart = lazy(() => import("./components/Cart"));
@@ -52,6 +54,10 @@ const appRouter = createBrowserRouter([
             <Cart />
           </Suspense>
         ),
+      },
+      {
+        path: "/instaMart",
+        element: <InstaMart />,
       },
     ],
   },

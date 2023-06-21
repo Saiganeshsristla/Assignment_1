@@ -14,14 +14,14 @@ const RestaurantMenu = function () {
     return <Shimmer />;
   }
   return (
-    <div className="Menu">
-      <img
+    <div className="w-full h-auto flex flex-col items-center m-10 mb-48">
+      <img className="w-[400px]"
         src={
           IMG_CDN_URL +
           ResMenu?.data?.cards[0]?.card?.card?.info?.cloudinaryImageId
         }
       />
-      <h1>Wellcome to {ResMenu?.data?.cards[0]?.card?.card?.info?.name}</h1>
+      <h1 className="font-bold text-2xl">Wellcome to {ResMenu?.data?.cards[0]?.card?.card?.info?.name}</h1>
       <h3>{ResMenu?.data?.cards[0]?.card?.card?.info?.locality}</h3>
       <h3>{ResMenu?.data?.cards[0]?.card?.card?.info?.areaName}</h3>
     </div>

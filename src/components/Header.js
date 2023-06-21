@@ -27,14 +27,17 @@ const Header = () => {
         <Link to="/cart">
           <li className="px-3">Cart</li>
         </Link>
+        <Link to="/instaMart">
+          <li className="px-3">InstaMart</li>
+        </Link>
       </ul>
 
       <h1 className="my-6">{isOnline ? "✅Online" : "❎Offline"}</h1>
 
       {isLoggedIn ? (
         <button
-          className="bg-white mr-5 h-12 w-20 mt-4
-           rounded-md hover:bg-pink-300"
+          className="bg-pink-300 mr-5 h-12 w-20 mt-4
+           rounded-md hover:bg-white"
           onClick={function () {
             setIsLoggedIn(false);
           }}
@@ -43,8 +46,8 @@ const Header = () => {
         </button>
       ) : (
         <button
-          className="bg-white mr-5 h-12 w-20 mt-4
-           rounded-md hover:bg-pink-300"
+          className="bg-pink-300 mr-5 h-12 w-20 mt-4
+           rounded-md hover:bg-white"
           onClick={function () {
             setIsLoggedIn(true);
           }}

@@ -1473,10 +1473,10 @@ export const RestaurantCard = ({
   return (
     <div className="w-52 m-2 p-2 shadow-lg h-72">
       <img src={imageUrl} alt="food image" />
-      <h2>{name}</h2>
-      <p>{area}</p>
-      <p>{costForTwoString}</p>
-      <h4>{avgRating} stars</h4>
+      <h2 className="font-bold text-xl ml-1">{name}</h2>
+      <p className="m-1">{area}</p>
+      <p className="m-1">{costForTwoString}</p>
+      <h4 className="m-1">{avgRating} stars</h4>
     </div>
   );
 };
