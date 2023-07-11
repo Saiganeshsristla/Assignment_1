@@ -12,16 +12,19 @@ import { Outlet } from "react-router-dom";
 import Loading from "./components/Loading";
 import InstaMart from "./components/InstaMart";
 import UserContext from "./utils/userContext";
-// import Cart from "./components/Cart";
+import Store from "./utils/store"
+import { Provider } from "react-redux";
+import store from "./utils/store";
+
 
 const Cart = lazy(() => import("./components/Cart"));
 const AppLayout = () => {
   return (
-    <>
+    <Provider store={store}>
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </Provider>
   );
 };
 

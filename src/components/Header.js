@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // created a custom hook useOnline
   const isOnline = useOnline();
+
+  const items = useSelector(store => store.cart.items);
 
   return (
     <div className="flex justify-between bg-pink-200 shadow-lg">
@@ -25,7 +28,7 @@ const Header = () => {
           <li className="px-3">Contact</li>
         </Link>
         <Link to="/cart">
-          <li className="px-3">Cart</li>
+          <li className="px-3">Cart - {items.length}</li>
         </Link>
         <Link to="/instaMart">
           <li className="px-3">InstaMart</li>
