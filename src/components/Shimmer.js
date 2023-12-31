@@ -1,7 +1,7 @@
 const Shimmer = () => {
   return (
     <>
-      <div className="h-9 w-48 bg-gray-300 m-4 ml-24">
+      <div className="h-9 w-52 bg-gray-300 m-4 ml-20">
         <div></div>
       </div>
       <div className="flex flex-wrap justify-center">

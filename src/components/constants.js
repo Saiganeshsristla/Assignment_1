@@ -1464,8 +1464,8 @@ export const restaurantList = [
 
 export const RestaurantCard = ({
   name,
-  area,
-  costForTwoString,
+  locality,
+  costForTwo,
   avgRating,
   cloudinaryImageId,
 }) => {
@@ -1474,8 +1474,8 @@ export const RestaurantCard = ({
     <div className="w-52 m-2 p-2 shadow-lg h-72">
       <img src={imageUrl} alt="food image" />
       <h2 className="font-bold text-xl ml-1">{name}</h2>
-      <p className="m-1">{area}</p>
-      <p className="m-1">{costForTwoString}</p>
+      <p className="m-1">{locality}</p>
+      <p className="m-1">{costForTwo}</p>
       <h4 className="m-1">{avgRating} stars</h4>
     </div>
   );

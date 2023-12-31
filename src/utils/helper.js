@@ -1,6 +1,6 @@
 export function FilterData(searchText, restaurantList) {
   return restaurantList.filter(function (restaurant) {
-    return restaurant.data.name
+    return restaurant?.info?.name
       .toLowerCase()
       .includes(searchText.toLowerCase());
   });
