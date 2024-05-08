@@ -39,6 +39,15 @@ const Body = () => {
           onChange={function (e) {
             setSearchText(e.target.value); 
           }}
+          onKeyDown={function(e) {
+            if(e.nativeEvent.key == "Enter"){
+              // Filterout the restaurants
+            const filterData = FilterData(searchText, allRestaurants);
+
+            // update the restaurant list
+            setFilterRestaurants(filterData);
+            }
+          }}
         />
         <button
           className="bg-purple-900 text-white px-2 pb-1 mb-1 rounded-full hover:bg-purple-400 hover:text-black"
