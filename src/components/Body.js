@@ -50,7 +50,7 @@ const Body = () => {
           }}
         />
         <button
-          className="bg-purple-900 text-white px-2 pb-1 mb-1 rounded-full hover:bg-purple-400 hover:text-black"
+          className="bg-black text-white px-2 pb-1 mb-1 rounded-full hover:bg-pink-300 hover:text-black"
           onClick={function () {
             // Filterout the restaurants
             const filterData = FilterData(searchText, allRestaurants);

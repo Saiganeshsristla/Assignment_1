@@ -5,7 +5,7 @@ import UserContext from "../utils/userContext";
 const Footer = () => {
   const { user } = useContext(UserContext);
   return (
-      <div className="bg-black flex justify-center h-16 ">
+      <div className="bg-black flex justify-center h-16">
         <p className="self-center mx-5 text-pink-300">
           @{user.name} made with ❤️
         </p>

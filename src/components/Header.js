@@ -19,19 +19,19 @@ const Header = () => {
 
       <ul className="flex my-6">
         <Link to="/">
-          <li className="px-3">Home</li>
+          <li className="px-3 font-semibold hover:font-bold">Home</li>
         </Link>
         <Link to="/about">
-          <li className="px-3">About</li>
+          <li className="px-3 font-semibold hover:font-bold">About</li>
         </Link>
         <Link to="/contact">
-          <li className="px-3">Contact</li>
+          <li className="px-3 font-semibold hover:font-bold">Contact</li>
         </Link>
         <Link to="/cart">
-          <li className="px-3">Cart - {items.length}</li>
+          <li className="px-3  font-semibold hover:font-bold">Cart - {items.length}</li>
         </Link>
         <Link to="/instaMart">
-          <li className="px-3">InstaMart</li>
+          <li className="px-3  font-semibold hover:font-bold">InstaMart</li>
         </Link>
       </ul>
 
