@@ -22,17 +22,10 @@ const RestaurantMenu = function () {
     return <Shimmer />;
   }
   return (
-    <div className="w-full h-auto flex flex-col items-center m-10 mb-48">
-      <img className="w-[400px]"
-        src={
-          IMG_CDN_URL +
-          ResMenu?.data?.cards[0]?.card?.card?.info?.cloudinaryImageId
-        }
-      />
-      <h1 className="font-bold text-2xl">Wellcome to {ResMenu?.data?.cards[0]?.card?.card?.info?.name}</h1>
-      <h3>{ResMenu?.data?.cards[0]?.card?.card?.info?.locality}</h3>
-      <h3>{ResMenu?.data?.cards[0]?.card?.card?.info?.areaName}</h3>
-      <button className="p-2 m-2 bg-gray-200" onClick={() => handleAddItem(ResMenu?.data?.cards[0]?.card?.card?.info?.name)}>Add to cart</button>
+    <div className="m-5 p-5">
+      {ResMenu.map((menu) => {
+        return <li className="font-semibold">{menu.card.info.name} - {menu.card.info.price / 100}Rs</li>
+      })}
     </div>
   );
 };

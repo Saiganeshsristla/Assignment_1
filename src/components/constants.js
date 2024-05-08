@@ -1,5 +1,5 @@
 export const IMG_CDN_URL =
-  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
 export const restaurantList = [
   {
@@ -1471,8 +1471,8 @@ export const RestaurantCard = ({
 }) => {
   let imageUrl = IMG_CDN_URL + cloudinaryImageId;
   return (
-    <div className="w-52 m-2 p-2 shadow-lg h-72">
-      <img src={imageUrl} alt="food image" />
+    <div className="w-52 m-2 p-2 shadow-lg h-80">
+      <img className="w-full h-44" src={imageUrl} alt="food image" />
       <h2 className="font-bold text-xl ml-1">{name}</h2>
       <p className="m-1">{locality}</p>
       <p className="m-1">{costForTwo}</p>

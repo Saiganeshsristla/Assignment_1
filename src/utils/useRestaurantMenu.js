@@ -9,12 +9,13 @@ const useRestaurantMenu = function (id) {
 
   async function getRestaurant() {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.2032638&lng=72.9479015&restaurantId=" +
+      "https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=15.4909301&lng=73.8278496&&submitAction=ENTER&restaurantId=" +
         id
     );
 
     const json = await data.json();
-    setResMenu(json);
+    console.log(json);
+    setResMenu(json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[3].card.card.itemCards);
   }
 
   return ResMenu;

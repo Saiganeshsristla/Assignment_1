@@ -33,11 +33,11 @@ const Body = () => {
       <div className="my-4 p-4 h-16 ml-16">
         <input
           type="text"
-          className="mx-3  h-8 p-2 border-2 border-gray-500 rounded-md hover:bg-gray-200 focus:h-10 focus:bg-white"
+          className="mx-3  h-8 p-2 border-2 border-gray-500 rounded-md hover:bg-gray-200 focus:bg-white"
           placeholder="search"
           value={searchText}
           onChange={function (e) {
-            setSearchText(e.target.value);
+            setSearchText(e.target.value); 
           }}
         />
         <button
